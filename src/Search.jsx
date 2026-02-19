@@ -3,7 +3,7 @@ export default function Search(){
     const[search,setSearch]=useState("")
     const name=["Dennis","Ritchie","Paul","Frank"];
 
-    const student=name.filter()
+    const student=name.filter((names)=>names.toLowerCase().includes(search.toLowerCase()));
     return(
         <>
         <h2>Demo to show search</h2>
