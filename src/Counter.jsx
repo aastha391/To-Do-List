@@ -1,4 +1,5 @@
-import {useState} from 'react'//importing a hook
+import {useState} from 'react'
+import { useEffect } from 'react';//importing a hook
 export default function Counter(){
     //var count=0;
 //this increment and decrement will work to inc or dec the value of count but for the chnages in ui we need states and to use states we need hooks
@@ -21,6 +22,9 @@ const [count,setCount]=useState(0);//created a state
         setCount(count=>count-1);
         console.log(count)
     }
+
+    useEffect(()=>{console.log("Welcome")},[])//mounting stage 
+    useEffect(()=>{console.log("Count Updated")},[count]);//updating stage
     return(
         <>
         <h1>Counter App</h1>
